@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputaQuiz</title>
+    <link rel="shortcut icon" href="img/quiz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="StyleQuiz.css">
+    <script src="ScriptQuiz.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick=window.location.reload()>Casa 🏠</button>
+            <p>Quiz de Multiplas escolhas <br> <b>&</b></br>Verdadeiro e Falso</p>
+        </nav>
+        <button onclick="verPontuacao()">Ver Ultima Pontuação</button>
+        <audio id="somAcerto" src="audio/Certo.mp3"></audio>
+        <audio id="somErro" src="audio/Errado.mp3"></audio>
+        <audio id="somEntrar" src="audio/muse click.mp3"></audio>
+        <audio id="somFundo" src="audio/Musica fundo.mp3"></audio>
+    </header>
+    
+    <div class="JogoCompleto">
+
+        <div class="Boas_vindas">
+            <h1>Bem-vindo ao ComputaQuiz</h1>
+        </div>
+
+        <div class="cadastro esconder">
+            <label for="Nome">Nome do Jogador:</label>
+            <input type="text" id="nome" required placeholder="Nome">
+        </div>
+
+        <div class="JogoQuiz esconder">
+            <h1 class="pergunta">Pergunta</h1>
+            <div class="opcoes">
+              <button class="opcao">Opção 1</button>
+              <button class="opcao">Opção 2</button>
+              <button class="opcao">Opção 3</button>
+              <button class="opcao">Opção 4</button>
+            </div>
+        </div>
+
+        <div class="btn_seguir">
+            <button class="entrar" onclick="EntrarNoJogo()">Entrar</button>
+            <button class="btnCadastro esconder" onclick="ComecarJogar()">Começar a Jogar</button>
+            <button class="proximo esconder" onclick="TrocarPergunta()">Próximo</button>
+        </div>
+    </div>
+</body>
+</html>
